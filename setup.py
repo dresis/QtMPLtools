@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 s = setup(
     name='QtMPLtools',
-    version='1.0.1',
+    version='1.0.2',
     description='Matplotlib plugins for Qt designer',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -29,6 +29,6 @@ s = setup(
     include_package_data=True,
     package_dir={"": "src"},
     packages=find_packages(where="src"),
-    python_requires=">=3.7",
+    python_requires=">=3.8",
     keywords=['python', 'qt', 'matplotlib', 'plugins', 'plots']
 )
