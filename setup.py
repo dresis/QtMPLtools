@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 s = setup(
     name='QtMPLtools',
-    version='1.0.2',
+    version='1.0.3',
     description='Matplotlib plugins for Qt designer',
     long_description=long_description,
     long_description_content_type="text/markdown",
@@ -25,7 +25,7 @@ s = setup(
             'designer=QtMPLtools.scripts.designer:main',
         ],
     },
-    package_data={'QtMPLtools': ['figures/*.ico']},
+    package_data={'QtMPLtools': ['figures/*.ico', 'Test Trial/*']},
     include_package_data=True,
     package_dir={"": "src"},
     packages=find_packages(where="src"),
