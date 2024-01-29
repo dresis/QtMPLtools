@@ -13,7 +13,7 @@ s = setup(
     author='Andy Velasco',
     author_email='',
     license='MIT',
-    install_requires=['matplotlib', 'PyQt6', 'pyqt6-tools'],
+    install_requires=['matplotlib', 'PyQt6', 'pyqt6-tools', 'qtpy'],
     classifiers=[
         "Development Status :: 3 - Alpha",
         "Intended Audience :: Developers",
