@@ -3,7 +3,7 @@ from matplotlib.figure import Figure
 from matplotlib import rcParams
 import numpy as np
 
-from PyQt6.QtCore import Property
+from qtpy.QtCore import Property
 
 rcParams['font.size'] = 9
 
