@@ -13,12 +13,15 @@ class MPLrect(Canvas):
         self._title  = 'Rect Plot'
         self._xlabel = 'X'
         self._ylabel = 'Y'
+        self._grid   = False
 
         self.figure = Figure(figsize=(width, height), dpi=dpi)
         self.axes = self.figure.add_subplot(111)
         self.axes.set_title(self._title)
         self.axes.set_xlabel(self._xlabel)
         self.axes.set_ylabel(self._ylabel)
+        self.axes.grid(self._grid)
+        
         if xscale is not None:
             self.axes.set_xscale(xscale)
         if yscale is not None:
@@ -33,6 +36,8 @@ class MPLrect(Canvas):
         return self._xlabel
     def getYlabel(self):
         return self._ylabel
+    def getGrid(self):
+        return self._grid
 
     def setTitle(self, new_title):
         self._title = new_title
@@ -46,11 +51,15 @@ class MPLrect(Canvas):
         self._ylabel = new_ylabel
         self.axes.set_ylabel(self._ylabel)
         self.draw()
-
+    def setGrid(self, set_grid):
+        self._grid = set_grid
+        self.axes.grid(self._grid)
+        self.draw()
 
     title  = Property(str, getTitle, setTitle)
     xlabel = Property(str, getXlabel, setXlabel)
     ylabel = Property(str, getYlabel, setYlabel)
+    grid   = Property(bool, getGrid, setGrid)
 
 class MPLpolar(Canvas):
     def __init__(self, parent, width=3, height=3.3, dpi=100):
