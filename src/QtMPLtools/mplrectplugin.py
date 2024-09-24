@@ -17,6 +17,9 @@ DOM_XML = """
         <property name="ylabel">
             <string>Y</string>
         </property>
+        <property name="grid">
+            <bool>False</bool>
+        </property>
     </widget>
 </ui>
 """
